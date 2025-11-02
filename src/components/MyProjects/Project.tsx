@@ -1,0 +1,36 @@
+import styles from "./index.module.css";
+
+interface ProjectProps {
+  videoSrc: string;
+  projectName: string;
+  paragraps: string[];
+}
+
+function Project({ videoSrc, projectName, paragraps }: ProjectProps) {
+  return (
+    <div className={styles.projectWrapper}>
+      <div className={styles.contentSpliter}>
+        <video
+          className={styles.videoPlayer}
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={videoSrc}
+        >
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.descriptWrapper}>
+          <h2 className={styles.projectName}>{projectName}</h2>
+          <div className={styles.paragrahpWrapper}>
+            {paragraps.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Project;
