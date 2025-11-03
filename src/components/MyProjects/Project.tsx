@@ -1,4 +1,6 @@
+import useVideoObserver from "../../hooks/useVideoObserver";
 import styles from "./index.module.css";
+
 
 interface ProjectProps {
   videoSrc: string;
@@ -7,16 +9,20 @@ interface ProjectProps {
 }
 
 function Project({ videoSrc, projectName, paragraps }: ProjectProps) {
+  const videoRef = useVideoObserver();
+
+
   return (
     <div className={styles.projectWrapper}>
       <div className={styles.contentSpliter}>
         <video
+          ref={videoRef}
           className={styles.videoPlayer}
-          autoPlay
           loop
           muted
           playsInline
           src={videoSrc}
+
         >
           Your browser does not support the video tag.
         </video>

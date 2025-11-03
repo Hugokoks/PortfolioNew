@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .videoPlayer {
   width: 60%;
 
@@ -10,64 +11,78 @@
   border-radius: 20px;
   transition: transform 0.3s ease-out;
 }
+
 .videoPlayer:hover {
   transform: scale(1.01);
 }
+
 .projectWrapper {
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
+
 .contentSpliter {
   display: flex;
   gap: 60px;
 }
+
 .descriptWrapper {
   padding: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .projectName {
   font-size: 38px;
   font-weight: 500;
 }
+
 .paragrahpWrapper {
   display: flex;
   flex-direction: column;
   gap: 50px;
   margin-top: 50px;
 }
+
 .paragrahpWrapper p {
   font-size: 23px;
 }
+
 .cardsContainer {
-  margin-top: 150px;
+  margin-top: 200px;
   display: flex;
   gap: 50px;
 }
+
 .stackCard {
   width: 500px;
 
   height: auto;
   max-height: 400px;
 }
+
 .cardIconWrapper {
   margin-bottom: 20px;
 }
+
 .cardContentBox {
   display: flex;
   flex-direction: column;
 }
+
 .cardTitle {
   font-size: 24px;
 }
+
 .cardSubtitle {
   font-size: 20px;
   margin-top: 10px;
 }
+
 .cardDescript {
   margin-top: 20px;
   font-size: 18px;

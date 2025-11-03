@@ -10,7 +10,7 @@ interface StackListProps {
 function StackList({ stackData }: StackListProps) {
   return (
     <AnimatedContent
-      distance={150}
+      distance={120}
       direction="vertical"
       reverse={false}
       duration={1.2}
@@ -18,7 +18,7 @@ function StackList({ stackData }: StackListProps) {
       initialOpacity={0.2}
       animateOpacity
       scale={1}
-      threshold={0.4}
+      threshold={0.2}
       delay={0.1}
     >
       <div className={styles.cardsContainer}>

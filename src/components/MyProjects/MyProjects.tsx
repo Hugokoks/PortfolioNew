@@ -10,6 +10,7 @@ export default function MyProjects() {
   return (
     <section className={styles.myProjects} id="projects">
       <SectionPointer />
+
       <div className={styles.projectWrapper}>
         <Project
           projectName={exclusiveKratomClub.projectName}
@@ -18,6 +19,8 @@ export default function MyProjects() {
         />
         <StackList stackData={exclusiveKratomClub.stackData} />
       </div>
+
+
     </section>
   );
 }

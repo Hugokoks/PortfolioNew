@@ -3,7 +3,7 @@ import { LayoutDashboard, Server, Database, Workflow } from "lucide-react";
 const projectData = {
   exclusiveKratomClub: {
     projectName: "www.exclusivekratomclub.com",
-    videoSrc: "./videos/ExclusiveKratomClub.mp4",
+    videoSrc: "./videos/ExclusiveKratomClub.webm",
     parahraps: [
       ` 
     This project's goal was to fuse a high-end "art piece" design with a
