@@ -5,7 +5,8 @@
 
   --color-bg: rgb(4, 0, 14);
   --color-text: #ffffff;
-  --color-border: #616161;
+  --color-border: rgb(57, 46, 78);
+  --color-card: rgb(23, 13, 39)
 }
 
 html,

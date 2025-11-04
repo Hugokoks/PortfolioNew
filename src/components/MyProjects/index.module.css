@@ -41,6 +41,14 @@
   font-weight: 500;
 }
 
+.h2 {
+
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 100px;
+  align-self: center;
+}
+
 .paragrahpWrapper {
   display: flex;
   flex-direction: column;
@@ -53,7 +61,6 @@
 }
 
 .cardsContainer {
-  margin-top: 200px;
   display: flex;
   gap: 50px;
 }

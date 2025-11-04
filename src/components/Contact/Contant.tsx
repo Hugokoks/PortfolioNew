@@ -1,0 +1,74 @@
+import SectionPointer from "../SectionPointer/SectionPointer";
+import styles from "./index.module.css";
+
+
+export default function Contant() {
+    return (
+        <section id="contact" className={styles.contact}>
+
+            <SectionPointer name="Let's Talk" style="mt-60" />
+            <div className={styles.formContainer}>
+                <p className={styles.intro}>
+                    👋 Have a question or a project idea? Fill out the form below
+                    and I'll get back to you as soon as possible.
+                </p>
+
+                <form
+                    action="https://formspree.io/f/TVUJ_UNIKATNI_KOD_ZDE"
+                    method="POST"
+                    className={styles.form}
+                >
+                    <div className={styles.formGroup}>
+                        <label htmlFor="name" className={styles.label}>Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            className={styles.input}
+                            required
+                        />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                        <label htmlFor="email" className={styles.label}>Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className={styles.input}
+                            required
+                        />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                        <label htmlFor="message" className={styles.label}>Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            className={styles.textarea}
+                            rows={6}
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" className={styles.submitButton}>
+                        Send message
+                    </button>
+                </form>
+                <div className={styles.socials}>
+
+                    <p>Or find me on:</p>
+                    <div className="flex">
+                        <a href="https://github.com/hugokoks" target="_blank" rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                        <span>|</span>
+                        <a href="https://www.linkedin.com/in/tvuj-profil" target="_blank" rel="noopener noreferrer">Fiver</a>
+                        <span>|</span>
+                        <a href="mailto:koritar.david.2018@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

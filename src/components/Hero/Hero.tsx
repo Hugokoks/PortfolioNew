@@ -41,7 +41,7 @@ export default function Hero() {
       <div className={styles.heroContent}>
         <div className={styles.textWrapper}>
           <h1>Kori Fullstack Developer</h1>
-          <p className={styles.stackText}>React | Go | PostgreSQL | DevOps</p>
+          <p className={styles.stackText}>React | Go | PostgreSQL</p>
           <h2>
             {isHeroVisible && (
               <TextType

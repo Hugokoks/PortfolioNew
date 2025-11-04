@@ -15,7 +15,7 @@ export default function StackCard({
   description,
   icon,
 }: StackCardProps) {
-  const spotlightColor = "rgba(150, 42, 130, 0.7)";
+  const spotlightColor = "rgba(150, 42, 130, 0.8)";
 
   return (
     <SpotlightCard className={styles.stackCard} spotlightColor={spotlightColor}>

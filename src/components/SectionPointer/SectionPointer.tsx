@@ -1,10 +1,19 @@
 import { ChevronDown } from "lucide-react";
 import AnimatedContent from "../AnimatedContent/AnimatedContent";
 
-export default function SectionPointer() {
+interface SectionPointerProps {
+
+  name: string;
+  style?: string;
+  distance?: number;
+  delay?: number;
+  threshold?: number;
+}
+
+export default function SectionPointer({ name, style, distance = 120, delay = 0.2, threshold = 0.4 }: SectionPointerProps) {
   return (
     <AnimatedContent
-      distance={150}
+      distance={distance}
       direction="vertical"
       reverse={true}
       duration={1.2}
@@ -12,11 +21,11 @@ export default function SectionPointer() {
       initialOpacity={0.2}
       animateOpacity
       scale={1.1}
-      threshold={0.2}
-      delay={0.2}
+      threshold={threshold}
+      delay={delay}
     >
-      <div className="flex flex-col items-center">
-        <h2 className="text-4xl font-medium mt-40">What I builded</h2>
+      <div className={`flex flex-col items-center ${style}`}>
+        <h2 className={`text-4xl font-medium `}>{name}</h2>
         <ChevronDown className="mt-5" color="white" size={46} strokeWidth={1} />
       </div>
     </AnimatedContent>
