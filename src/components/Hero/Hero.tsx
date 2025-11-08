@@ -3,12 +3,13 @@ import Hyperspeed from "../HyperSpeed/HyperSpeed";
 import TextType from "../TextType/TextType";
 import BtnMain from "../Btns/BtnMain/BtnMain";
 import ClickingMouseIcon from "../ClickingMouseIcon/ClickingMouseIcon";
+import useDeviceType from "../../hooks/useDeviceType";
 
 import { useState, useEffect, useRef } from "react";
-
 export default function Hero() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
 
+  const { isDesktop } = useDeviceType();
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -34,10 +35,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className={styles.hero} ref={heroRef}>
-      <div className={styles.bgBox}>
-
-        {isHeroVisible && <Hyperspeed />}
-      </div>
+      <div className={styles.bgBox}>{isHeroVisible && <Hyperspeed />}</div>
       <div className={styles.heroContent}>
         <div className={styles.textWrapper}>
           <h1>Kori Fullstack Developer</h1>
@@ -54,9 +52,10 @@ export default function Hero() {
             )}
           </h2>
         </div>
-        <BtnMain>Contact me</BtnMain>
+        <BtnMain>Let's start your project</BtnMain>
       </div>
-      {isHeroVisible && <ClickingMouseIcon size={30} />}
+
+      {isDesktop && <ClickingMouseIcon size={30} />}
     </section>
   );
 }

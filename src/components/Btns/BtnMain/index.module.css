@@ -1,13 +1,12 @@
 .btn {
   height: 60px;
-  width: 200px;
+  width: 280px;
   border-radius: 100px;
-  background: linear-gradient(90deg,
-      #753aff 0%,
-      /* Fialová začíná */
-      #a855f7 100%
-      /* Světlejší fialová/růžová končí */
-    );
+  background: linear-gradient(
+    90deg,
+    #753aff 0%,
+    /* Fialová začíná */ #a855f7 100% /* Světlejší fialová/růžová končí */
+  );
   font-weight: 500;
 
   cursor: pointer;
@@ -33,10 +32,12 @@
   width: 75%;
   height: 100%;
 
-  background: linear-gradient(120deg,
-      transparent,
-      rgba(255, 255, 255, 0.35),
-      transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
   transform: skewX(-25deg);
 
   transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -49,4 +50,10 @@
 
 .btn:hover::before {
   left: 125%;
+}
+@media (max-width: 640px) {
+  .btn {
+    font-size: clamp(14px, 5vw, 16px);
+    width: 250px;
+  }
 }

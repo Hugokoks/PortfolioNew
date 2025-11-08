@@ -2,11 +2,11 @@ import styles from "./index.module.css";
 import SpotlightCard from "../SpotlightCard/SpotlightCard";
 import type { ReactNode } from "react";
 
-interface StackCardProps {
+export interface StackItem {
   title: string;
   subtitle: string;
   description: string;
-  icon?: ReactNode;
+  icon: ReactNode;
 }
 
 export default function StackCard({
@@ -14,7 +14,7 @@ export default function StackCard({
   subtitle,
   description,
   icon,
-}: StackCardProps) {
+}: StackItem) {
   const spotlightColor = "rgba(150, 42, 130, 0.8)";
 
   return (

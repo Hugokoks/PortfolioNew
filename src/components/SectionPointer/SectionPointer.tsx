@@ -1,8 +1,8 @@
+import styles from "./index.module.css";
 import { ChevronDown } from "lucide-react";
 import AnimatedContent from "../AnimatedContent/AnimatedContent";
 
 interface SectionPointerProps {
-
   name: string;
   style?: string;
   distance?: number;
@@ -10,7 +10,13 @@ interface SectionPointerProps {
   threshold?: number;
 }
 
-export default function SectionPointer({ name, style, distance = 120, delay = 0.2, threshold = 0.4 }: SectionPointerProps) {
+export default function SectionPointer({
+  name,
+  style,
+  distance = 120,
+  delay = 0.2,
+  threshold = 0.4,
+}: SectionPointerProps) {
   return (
     <AnimatedContent
       distance={distance}
@@ -24,8 +30,10 @@ export default function SectionPointer({ name, style, distance = 120, delay = 0.
       threshold={threshold}
       delay={delay}
     >
-      <div className={`flex flex-col items-center ${style}`}>
-        <h2 className={`text-4xl font-medium `}>{name}</h2>
+      <div
+        className={`flex flex-col items-center ${styles.pointerWrapper} ${style}`}
+      >
+        <h2>{name}</h2>
         <ChevronDown className="mt-5" color="white" size={46} strokeWidth={1} />
       </div>
     </AnimatedContent>

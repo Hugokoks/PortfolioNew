@@ -33,16 +33,17 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  max-width: 600px;
 }
-
 .projectName {
   font-size: 38px;
   font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .h2 {
-
   font-size: 38px;
   font-weight: 500;
   margin-bottom: 100px;
@@ -52,46 +53,76 @@
 .paragrahpWrapper {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-top: 50px;
+  gap: 30px;
 }
 
 .paragrahpWrapper p {
-  font-size: 23px;
+  font-size: 28px;
+  font-weight: 300;
+}
+/* 🌐 TABLETY */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .contentSpliter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .videoPlayer {
+    width: 100%;
+  }
+
+  .descriptWrapper {
+    max-width: 90%;
+    padding: 0 10px;
+    text-align: start;
+    font-size: clamp(22px, 4vw, 29px);
+  }
+
+  .projectName {
+    font-size: 32px;
+  }
+
+  .paragrahpWrapper p {
+    font-size: 28px;
+  }
 }
 
-.cardsContainer {
-  display: flex;
-  gap: 50px;
-}
+/* 📱 MOBILY */
+@media (max-width: 640px) {
+  .contentSpliter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
 
-.stackCard {
-  width: 500px;
+  .videoPlayer {
+    width: 100%;
+    border-radius: 16px;
+  }
 
-  height: auto;
-  max-height: 400px;
-}
+  .descriptWrapper {
+    width: 100%;
+    padding: 0 12px;
+    align-items: start;
+    text-align: start;
+    font-size: clamp(22px, 4vw, 29px);
+  }
 
-.cardIconWrapper {
-  margin-bottom: 20px;
-}
+  .projectName {
+    font-size: clamp(22px, 6vw, 28px);
+    margin-bottom: 16px;
+  }
 
-.cardContentBox {
-  display: flex;
-  flex-direction: column;
-}
+  .paragrahpWrapper {
+    gap: 18px;
+  }
 
-.cardTitle {
-  font-size: 24px;
-}
-
-.cardSubtitle {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.cardDescript {
-  margin-top: 20px;
-  font-size: 18px;
-  color: rgb(161, 161, 170);
+  .paragrahpWrapper p {
+    font-size: clamp(18px, 5vw, 22px);
+    line-height: 1.5;
+    max-width: 90%;
+  }
 }

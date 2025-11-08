@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 :root {
-
   --color-bg: rgb(4, 0, 14);
   --color-text: #ffffff;
   --color-border: rgb(57, 46, 78);
-  --color-card: rgb(23, 13, 39)
+  --color-card: rgb(23, 13, 39);
 }
 
 html,
 body {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 #root {
@@ -19,7 +19,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   html,
   body {
     max-width: 100%;
@@ -28,7 +27,6 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   html,
   body {
     max-width: 100%;

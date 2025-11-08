@@ -1,0 +1,120 @@
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 1200;
+  color: #e9e6ee;
+  pointer-events: auto;
+  margin-top: 80px;
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: rgb(6, 1, 20);
+  gap: 16px;
+
+  justify-content: space-between;
+}
+
+/* značka / jméno vlevo */
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.tag {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 4px;
+  color: #d9cbe6;
+}
+
+/* ikony vpravo */
+.links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* tlačítko pro ikonu */
+.iconBtn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  color: #f3e7ff;
+  text-decoration: none;
+  transition: transform 180ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 220ms,
+    color 150ms;
+  font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+/* drop-shadow a glow na hover */
+.iconBtn:hover,
+.iconBtn:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(138, 43, 226, 0.16),
+    0 0 18px rgba(255, 0, 255, 0.06);
+  color: #ff61ff;
+  outline: none;
+}
+
+/* screen-reader only label */
+.sr {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* credits bar dole */
+.credits {
+  max-width: 1200px;
+  margin: 10px auto 40px;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* responsiveness */
+@media (max-width: 880px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .links {
+    align-self: stretch;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .links {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
