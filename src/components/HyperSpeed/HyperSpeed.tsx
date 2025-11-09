@@ -1,4 +1,4 @@
-import { useEffect, useRef, FC } from "react";
+import { useEffect, useRef, type FC } from "react";
 import * as THREE from "three";
 import {
   BloomEffect,
