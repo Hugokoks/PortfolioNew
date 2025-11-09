@@ -4,10 +4,12 @@ import TextType from "../TextType/TextType";
 import BtnMain from "../Btns/BtnMain/BtnMain";
 import ClickingMouseIcon from "../ClickingMouseIcon/ClickingMouseIcon";
 import useDeviceType from "../../hooks/useDeviceType";
+import useActiveSection from "../../hooks/useActiveSection";
 
 import { useState, useEffect, useRef } from "react";
 export default function Hero() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
+  const { scrollTo } = useActiveSection();
 
   const { isDesktop } = useDeviceType();
   const heroRef = useRef<HTMLElement>(null);
@@ -52,7 +54,7 @@ export default function Hero() {
             )}
           </h2>
         </div>
-        <BtnMain>Let's start your project</BtnMain>
+        <BtnMain handleClick={() => scrollTo("contact")} >Let's start your project</BtnMain>
       </div>
 
       {isDesktop && <ClickingMouseIcon size={30} />}
