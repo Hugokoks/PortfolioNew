@@ -1,15 +1,15 @@
-.pointerWrapper h2 {
+.pointerWrapper {
   font-size: 32px;
 }
 
 @media (max-width: 640px) {
-  .pointerWrapper h2 {
+  .pointerTitle {
     font-size: 24px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 980px) {
-  .pointerWrapper h2 {
+  .pointerTitle {
     font-size: 28px;
   }
 }

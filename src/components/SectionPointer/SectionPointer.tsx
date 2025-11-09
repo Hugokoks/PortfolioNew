@@ -33,7 +33,7 @@ export default function SectionPointer({
       <div
         className={`flex flex-col items-center ${styles.pointerWrapper} ${style}`}
       >
-        <h2>{name}</h2>
+        <div className={styles.pointerTitle}>{name}</div>
         <ChevronDown className="mt-5" color="white" size={46} strokeWidth={1} />
       </div>
     </AnimatedContent>
