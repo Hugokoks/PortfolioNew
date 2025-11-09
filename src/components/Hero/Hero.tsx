@@ -42,7 +42,7 @@ export default function Hero() {
         <div className={styles.textWrapper}>
           <h1>Kori Fullstack Developer</h1>
           <p className={styles.stackText}>React | Go | PostgreSQL</p>
-          <h2>
+          <div className={styles.subtitle}>
             {isHeroVisible && (
               <TextType
                 text={["Ready to build something amazing?", "Hit me up!"]}
@@ -52,7 +52,7 @@ export default function Hero() {
                 cursorCharacter="|"
               />
             )}
-          </h2>
+          </div>
         </div>
         <BtnMain handleClick={() => scrollTo("contact")} >Let's start your project</BtnMain>
       </div>
