@@ -79,7 +79,7 @@ export default function Contant() {
             </a>
             <span>|</span>
             <a
-              href="https://www.linkedin.com/in/tvuj-profil"
+              href="https://www.fiverr.com/david_kori"
               target="_blank"
               rel="noopener noreferrer"
             >

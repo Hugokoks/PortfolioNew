@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
       <div className={styles.links}>
         <a
-          href="mailto:your@email.com"
+          href="mailto:koritar.david.2018@gmail.com"
           className={styles.iconBtn}
           aria-label="Email"
         >
@@ -27,7 +27,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/Hugokoks"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconBtn}
@@ -38,7 +38,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://www.fiverr.com/your-profile"
+          href="https://www.fiverr.com/david_kori"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconBtn}
