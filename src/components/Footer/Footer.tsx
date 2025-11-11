@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
       <div className={styles.links}>
         <a
-          href="mailto:koritar.david.2018@gmail.com"
+          href="mailto:koritardev@gmail.com"
           className={styles.iconBtn}
           aria-label="Email"
         >

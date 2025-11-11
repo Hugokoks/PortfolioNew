@@ -87,7 +87,7 @@ export default function Contant() {
             </a>
             <span>|</span>
             <a
-              href="mailto:koritar.david.2018@gmail.com"
+              href="mailto:koritardev@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >

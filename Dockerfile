@@ -25,6 +25,7 @@ COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 # Zkopírování finálního buildu z buildovací fáze do Nginx složky
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+RUN chown -R nginx:nginx /usr/share/nginx/html
 # Spuštění Nginx na portu 80
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
