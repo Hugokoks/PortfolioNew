@@ -27,5 +27,5 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 
 RUN chown -R nginx:nginx /usr/share/nginx/html
 # Spuštění Nginx na portu 80
-EXPOSE 80
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
