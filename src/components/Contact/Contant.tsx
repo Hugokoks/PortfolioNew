@@ -1,11 +1,32 @@
 import SectionPointer from "../SectionPointer/SectionPointer";
 import styles from "./index.module.css";
 import useDeviceType from "../../hooks/useDeviceType";
+import { useMutation } from "@tanstack/react-query";
+import postMessage from "./api";
 
 export default function Contant() {
   const { isDesktop } = useDeviceType();
   const pointerMarginTop = isDesktop ? "mt-60" : "mt-40";
 
+  const { mutate, isPending, error, isError } = useMutation({
+    mutationFn: postMessage,
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    const payload = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+        .value,
+    };
+
+    mutate(payload);
+  };
+
+  console.log(isPending, error, isError);
   return (
     <section id="contact" className={styles.contact}>
       <SectionPointer
@@ -23,6 +44,7 @@ export default function Contant() {
           action="https://formspree.io/f/xgvrwkoz"
           method="POST"
           className={styles.form}
+          onSubmit={handleSubmit}
         >
           <div className={styles.formGroup}>
             <label htmlFor="name" className={styles.label}>
