@@ -10,6 +10,10 @@ export default function Contant() {
 
   const { mutate, isPending, error, isError } = useMutation({
     mutationFn: postMessage,
+    onSuccess: (data) => {
+      console.log("✅ Server response:", data);
+      alert("Message sent successfully!");
+    },
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
