@@ -3,16 +3,26 @@ import styles from "./index.module.css";
 import useDeviceType from "../../hooks/useDeviceType";
 import { useMutation } from "@tanstack/react-query";
 import postMessage from "./api";
+import { useNotification } from "../../context/NotificationProvider";
 
 export default function Contant() {
   const { isDesktop } = useDeviceType();
   const pointerMarginTop = isDesktop ? "mt-60" : "mt-40";
+  const { showNotification } = useNotification();
 
   const { mutate, isPending, error, isError } = useMutation({
     mutationFn: postMessage,
-    onSuccess: (data) => {
-      console.log("✅ Server response:", data);
-      alert("Message sent successfully!");
+    onSuccess: () => {
+      showNotification({
+        message: "Message sent successfully! 😎",
+        status: "ok",
+      });
+    },
+    onError: () => {
+      showNotification({
+        message: `Message could not be sent. Please try again in a moment. 😞`,
+        status: "error",
+      });
     },
   });
 
@@ -44,12 +54,7 @@ export default function Contant() {
           get back to you as soon as possible.👋
         </p>
 
-        <form
-          action="https://formspree.io/f/xgvrwkoz"
-          method="POST"
-          className={styles.form}
-          onSubmit={handleSubmit}
-        >
+        <form method="POST" className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name" className={styles.label}>
               Name
