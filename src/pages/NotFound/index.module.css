@@ -1,0 +1,41 @@
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.code {
+  font-size: 120px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #b026ff, #5a00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text {
+  font-size: 20px;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+.back {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #7a19ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+  color: white;
+}
+
+.back:hover {
+  background: #9a4dff;
+  transform: scale(1.05);
+}
