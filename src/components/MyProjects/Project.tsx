@@ -7,9 +7,15 @@ interface ProjectProps {
   videoSrc: string;
   projectName: string;
   paragraps: string[];
+  projectUrl: string;
 }
 
-function Project({ videoSrc, projectName, paragraps }: ProjectProps) {
+function Project({
+  videoSrc,
+  projectName,
+  paragraps,
+  projectUrl,
+}: ProjectProps) {
   const videoRef = useVideoObserver();
 
   return (
@@ -34,7 +40,9 @@ function Project({ videoSrc, projectName, paragraps }: ProjectProps) {
           </video>
 
           <div className={styles.descriptWrapper}>
-            <h2 className={styles.projectName}>{projectName}</h2>
+            <a className={styles.projectName} href={projectUrl} target="_blank">
+              {projectName}
+            </a>
             <div className={styles.paragrahpWrapper}>
               {paragraps.map((p) => (
                 <p key={p}>{p}</p>

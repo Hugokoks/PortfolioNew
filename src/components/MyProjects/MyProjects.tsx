@@ -18,6 +18,7 @@ export default function MyProjects() {
         projectName={exclusiveKratomClub.projectName}
         videoSrc={exclusiveKratomClub.videoSrc}
         paragraps={exclusiveKratomClub.parahraps}
+        projectUrl={exclusiveKratomClub.projectUrl}
       />
     </section>
   );

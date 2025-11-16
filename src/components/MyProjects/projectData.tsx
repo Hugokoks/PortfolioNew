@@ -2,6 +2,7 @@ const projectData = {
   exclusiveKratomClub: {
     projectName: "www.exclusivekratomclub.com",
     videoSrc: "./videos/ExclusiveKratomClub.webm",
+    projectUrl: "https://exclusivekratomclubfrontend-production.up.railway.app",
     parahraps: [
       `  
     Premium e-commerce platform focused on
