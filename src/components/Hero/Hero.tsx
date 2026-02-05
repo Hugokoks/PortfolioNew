@@ -40,8 +40,8 @@ export default function Hero() {
       <div className={styles.bgBox}>{isHeroVisible && <Hyperspeed />}</div>
       <div className={styles.heroContent}>
         <div className={styles.textWrapper}>
-          <h1>Kori Fullstack Developer</h1>
-          <p className={styles.stackText}>React | Go | PostgreSQL</p>
+          <h1>Kori Backend & Systems Engineer</h1>
+          <p className={styles.stackText}>Go | Networking | High-Performance APIs</p>
           <div className={styles.subtitle}>
             {isHeroVisible && (
               <TextType
