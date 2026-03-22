@@ -16,29 +16,29 @@ import useDeviceType from "../../hooks/useDeviceType";
 
 const stackData = [
   {
-    title: "High-Performance Go API",
-    subtitle: "Lightning-fast APIs that scale with your business.",
-    description: "Go | REST API Architecture | JWT Authentication",
+    title: "Backend",
+    subtitle: "Fast and reliable backend systems.",
+    description: "Built to scale with your business and handle real-world usage.",
     icon: <Server size={46} strokeWidth={1} />,
   },
 
   {
-    title: "Dynamic React Frontend",
-    subtitle: "The 'art piece' user experience.",
+    title: "Frontend",
+    subtitle: "Modern websites that convert",
     description:
-      "React (TypeScript) | Framer Motion | Responsive & SEO-Friendly",
+      "Clean, responsive and optimized for performance and user experience.",
     icon: <LayoutDashboard size={46} strokeWidth={1} />,
   },
   {
-    title: "Robust Database Design",
-    subtitle: "Because speed starts in the schema",
-    description: "PostgreSQL | E-commerce Schema Design | Optimized Queries",
+    title: "Database",
+    subtitle: "Structured and scalable data",
+    description: "Designed to keep your data organized, fast and future-proof.",
     icon: <Database size={46} strokeWidth={1} />,
   },
   {
-    title: "Full Production Deployment",
-    subtitle: "You get results, not just source code.",
-    description: "CI/CD Pipeline | DNS & SSL Config | Containers",
+    title: "Deployment",
+    subtitle: "From idea to production",
+    description: "Hosting, domains, SSL, deployment – everything ready to use.",
     icon: <Workflow size={46} strokeWidth={1} />,
   },
 ];
@@ -85,12 +85,11 @@ export default function Values() {
           scale={1.1}
         >
           <p className={styles.italicText}>
-            Let’s turn your vision into energy on screen.
+            I build systems that turn ideas into real, working products.
           </p>
-          <p>I care about how things feel, not just how they work.</p>
+          <p>From simple websites to full-scale platforms,</p>
           <p>
-            My goal is to create experiences that run fast, look great, and feel
-            smooth.
+            I focus on fast, reliable and practical solutions.
           </p>
         </AnimatedContent>
       </div>

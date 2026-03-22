@@ -4,69 +4,53 @@ const projectData = {
     videoSrc: "./videos/ExclusiveKratomClub.webm",
     projectUrl: "https://exclusivekratomclubfrontend-production.up.railway.app",
     parahraps: [
-      `  
-    Premium e-commerce platform focused on
-    selling high-quality kratom and related accessories. The project
-    emphasizes both product authenticity and a clean, futuristic user
-    experience.  
-      `,
-      ` 
-    This project's goal was to fuse a high-end "art piece" design with a
-      high-performance backend.
-    `,
-
       `
-      I architected the entire platform solo, from the database schema and
-        custom Go API all the way to the final production deploy.
-    `,
+      Premium e-commerce platform focused on high-quality products with a clean, modern user experience.
+      `,
+      `
+      Designed to combine high-end visual style with a fast and scalable backend.
+      `,
+      `
+      Built end-to-end — from database design and Go API to full production deployment.
+      `,
     ],
     alignLeft: true,
   },
-  netsnitch:{
+
+  netsnitch: {
     projectName: "Netsnitch",
     videoSrc: "./videos/netsnitch.webm",
-    projectUrl:"https://github.com/Hugokoks/netsnitch",
+    projectUrl: "https://github.com/Hugokoks/netsnitch",
     parahraps: [
-       `
-      Netsnitch is a modular network scanning framework designed for
-      extensibility and long-term evolution. New scan types can be added
-      without modifying the core engine.
+      `
+      Modular network scanning framework built for flexibility and future expansion.
       `,
       `
-      A task-based execution engine allows multiple scan strategies such as
-      ARP discovery and TCP port scanning to run concurrently, while remaining
-      fully decoupled from scan-specific logic.
+      Supports multiple scan types (ARP, TCP, UDP) with a concurrent task-based engine.
+      `,
+      `
+      Designed for performance, scalability and clean architecture.
       `,
     ],
     alignLeft: true,
   },
-  vpnsoftware:{
+
+  vpnsoftware: {
     projectName: "VPN Software",
     videoSrc: "./videos/vpnsoftware.webm",
-    projectUrl:"https://github.com/Hugokoks/VPNServer",
+    projectUrl: "https://github.com/Hugokoks/VPNServer",
     parahraps: [
       `
-      This project is a custom VPN client-server implementation built around
-      a minimal but fully functional core. The focus is on protocol design,
-      encrypted communication and system-level behavior rather than
-      end-user features.
+      Custom VPN client-server implementation focused on performance and encrypted communication.
       `,
       `
-      The VPN uses a custom handshake mechanism with asynchronous cryptography,
-      inspired by TLS concepts but without certificate-based authorization.
-      Secure communication channels are established over UDP, prioritizing
-      performance and low-level control.
+      Uses a custom handshake and secure UDP-based tunneling inspired by TLS principles.
       `,
       `
-      The server manages VPN address allocation dynamically, assigning virtual
-      IPs to clients based on availability and active usage. Despite being a
-      foundation-level implementation, the tunnel is fully functional and
-      supports real traffic such as web browsing and streaming.
+      Fully functional system capable of handling real traffic like browsing and streaming.
       `,
     ],
     alignLeft: false,
-
-
   }
 };
 
